@@ -10,7 +10,8 @@
   "dependencies": {
     "aurelia": "latest",
     "bootstrap": "^5.1.0",
-    "bootstrap-icons": "^1.5.0"
+    "bootstrap-icons": "^1.5.0",
+    "qr-scanner": "^1.3.0"
   },
   "devDependencies": {
     "@aurelia/testing": "latest",
