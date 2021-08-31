@@ -1,3 +1,34 @@
-.message {
-  background-color: lightblue;
+/*
+  Imports
+*/
+@import url("https://use.typekit.net/knt8jun.css");
+
+
+/*
+  Variables
+*/
+$base-color: #BAD1E2;
+$base-color-darker-10: darken($base-color, 10);
+$base-color-darker-20: darken($base-color, 20);
+$base-color-darker-30: darken($base-color, 30);
+
+/*
+  Elements
+*/
+html, body {
+  height: 100%;
+
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: $base-color;
+
+  overflow: hidden;
+}
+
+.app-viewport {
+  min-height: 100%;
+  height: 100%;
+  overflow: auto;
 }
