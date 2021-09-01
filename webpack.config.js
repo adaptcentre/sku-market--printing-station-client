@@ -42,7 +42,14 @@ module.exports = function(env, { analyze }) {
     devServer: {
       historyApiFallback: true,
       open: !process.env.CI,
-      port: 9002
+      port: 9002,
+      proxy: {
+        '/api': {
+          target: 'http://localhost:4030',
+          //pathRewrite: { '^/api': '' },
+          logLevel: 'debug'
+        }
+      }
     },
     module: {
       rules: [
