@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const cssLoader = 'css-loader';
 
@@ -65,7 +66,12 @@ module.exports = function(env, { analyze }) {
     },
     plugins: [
       new HtmlWebpackPlugin({ template: 'index.html' }),
-      analyze && new BundleAnalyzerPlugin()
+      analyze && new BundleAnalyzerPlugin(),
+      new CopyPlugin({
+        patterns: [
+          { from: 'static', to: '' }
+        ]
+      })
     ].filter(p => p)
   }
 }

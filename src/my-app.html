@@ -2,13 +2,13 @@
 <import from="./resources/elements/error-modal"></import>
 
 <div class="app-viewport">
-  <div class="welcome py-5 px-5">
+  <div class="welcome">
   
     <!-- LOGO -->
     <div class="welcome-logo">
       <div class="d-flex justify-content-center">
-        <div class="col-6">
-          <div style="width: 100%; height: 200px; background: rgba(0,0,0, 0.5);"></div>
+        <div class="logo">
+          <img src="images/sku_logo_large.png" alt="">
         </div>
       </div>
     </div>
@@ -16,19 +16,27 @@
     <!-- TEXT -->
     <div class="welcome-text mt-5">
       <div class="d-flex justify-content-center">
-        <div class="col-6">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo rerum tenetur ad ex impedit, cum facere
-            cupiditate esse qui unde aliquam sed minima. Accusantium dolorum eos temporibus tempora eius dolores.
-          </p>
+        <div class="container">
+          <div class="row">
+            <div class="offset-2 col-8">
+              <h1 class="bold-font text-center">
+                PRINT YOUR RECEIPT
+              </h1>
+            </div>
+            <div class="offset-3 col-6 mt-3">
+              <p class="px-5">
+                Your digital receipt has a QR code at the bottom. To print your receipt, just hold your AR code up to the camera at the top of this display.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   
     <!-- PREVIEW -->
-    <div class="welcome-preview mt-5">
+    <div class="welcome-preview mt-4">
       <div class="d-flex justify-content-center">
-        <div style="width: 400px; height: 400px; border: 1px solid black;">
+        <div class="canvas-container">
           <canvas style="width: 100%; height: 100%; display: block;"></canvas>
         </div>
       </div>

@@ -27,12 +27,63 @@ html, body {
   overflow: hidden;
 }
 
+.regular-font {
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bold-font {
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+§
 .base-background {
   background-color: $base-color;
 }
 
 .app-viewport {
-  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  overflow: auto;
+}
+
+.welcome-logo {
+  .logo {
+    
+    width: 250px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.welcome-text {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.welcome-preview {
+  .canvas-container {
+    width: 350px; 
+    height: 350px; 
+    border: 1px solid black;
+  }
+}
+
+.error-modal, .success-modal {
+  background-color: black;
+  color: $base-color-darker-10;
+
+  p {
+    font-size: 1.2rem;
+  }
 }

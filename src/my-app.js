@@ -40,11 +40,12 @@ export class MyApp {
     this.subs.push(s1)
 
     // debug
-    setTimeout(() => {
-      let code = '44d1366c-92f1-4071-b4af-b24a3ca1e0e9'
+    // setTimeout(() => {
+    //   let code = '44d1366c-92f1-4071-b4af-b24a3ca1e0e9'
 
-      this.onScan(code)
-    }, 5000)
+    //   //this.onScan(code)
+    //   this.eventAggregator.publish('error-modal:open', {})
+    // }, 2000)
   }
 
   tick() {
@@ -56,13 +57,20 @@ export class MyApp {
     let cw = this.canvas.width
     let ch = this.canvas.height
 
+    let ww = cw * 2
+    let hh = ch * 2
+
+    let sx = (vw / 2) - (ww / 2)
+    let sy = (vh / 2) - (hh / 2)
+
+    let sw = ww
+    let sh = hh
+
     ctx.drawImage(this.videoElement,
-      0, 0,
-      vw, vh,
-      0, 0,
+      sx, sy,
+      sw, sh,
+      0,0,
       cw, ch
-      //(cw / 2) - (vw / 2), (ch / 2) - (vh / 2),
-      //vw, vh
     )
 
     this.animationFrame = requestAnimationFrame(() => {
