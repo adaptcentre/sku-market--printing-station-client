@@ -38,14 +38,6 @@ export class MyApp {
     })
 
     this.subs.push(s1)
-
-    // debug
-    // setTimeout(() => {
-    //   let code = '44d1366c-92f1-4071-b4af-b24a3ca1e0e9'
-
-    //   //this.onScan(code)
-    //   this.eventAggregator.publish('error-modal:open', {})
-    // }, 2000)
   }
 
   tick() {
@@ -88,6 +80,7 @@ export class MyApp {
     console.log('Code is Valid')
 
     try {
+      this.loading = true
       this.stop()
 
       let response = await this.apiService.print(code)
@@ -106,6 +99,8 @@ export class MyApp {
       console.log('Opening Error Modal')
       this.eventAggregator.publish('error-modal:open', {})
     }
+
+    this.loading = false
   }
 
   isCodeValid(code) {
