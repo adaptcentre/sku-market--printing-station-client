@@ -49,8 +49,8 @@ export class MyApp {
     let cw = this.canvas.width
     let ch = this.canvas.height
 
-    let ww = cw * 2
-    let hh = ch * 2
+    let ww = cw * 2.5
+    let hh = ch * 2.5
 
     let sx = (vw / 2) - (ww / 2)
     let sy = (vh / 2) - (hh / 2)
